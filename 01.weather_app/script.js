@@ -50,9 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchBox.value == "") {
       errorMsg.style.display = "block";
       errorMsg.innerHTML = "Please ! Enter City Name.";
-    }
-    // weather.classList.remove("weather");
-    else {
+      weather.classList.add("weather");
+    } else {
       checkWeather(searchBox.value);
     }
   });
