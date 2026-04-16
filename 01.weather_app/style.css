@@ -117,3 +117,19 @@ body {
 .hidden {
   display: none;
 }
+
+@media (max-width: 480px) {
+  .search button {
+    border-radius: 70%;
+  }
+
+  .card {
+    width: 95%;
+    margin: 30px auto;
+    padding: 20px 3px;
+  }
+
+  .col {
+    margin-right: 8px;
+  }
+}

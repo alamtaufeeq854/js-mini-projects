@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.getElementById("search-Input");
   const searchBtn = document.getElementById("search-btn");
   const weather = document.getElementById("weather");
+  const errorMsg = document.getElementById("error");
 
   async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
     if (response.status == 404) {
+      errorMsg.innerHTML = "Invalid City Name !";
       document.querySelector(".error").style.display = "block";
       weather.classList.add("weather");
     } else {
@@ -45,7 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   searchBtn.addEventListener("click", () => {
+    if (searchBox.value == "") {
+      errorMsg.style.display = "block";
+      errorMsg.innerHTML = "Please ! Enter City Name.";
+    }
     // weather.classList.remove("weather");
-    checkWeather(searchBox.value);
+    else {
+      checkWeather(searchBox.value);
+    }
   });
 });
