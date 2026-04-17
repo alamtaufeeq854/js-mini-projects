@@ -6,6 +6,7 @@
 }
 
 body {
+  padding-top: 60px;
   background-color: #222222;
   background: linear-gradient(to right, #0e5344, #6b4213);
 }
@@ -20,6 +21,8 @@ body {
   padding: 40px 35px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  margin: 120px auto 0;
 }
 
 .search {
@@ -240,4 +243,33 @@ body {
     width: 45px;
     height: 45px;
   }
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  top: 15px;
+  right: 15px;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
 }

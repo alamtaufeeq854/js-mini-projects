@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(135deg, #153677, #4e085f);
   color: #0b0000;
+  padding-top: 60px;
 }
 
 .to-do-app img {
@@ -21,6 +22,7 @@ body {
   min-height: 100vh;
   padding: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: 60px auto 0;
 }
 
 .to-do-app {
@@ -213,4 +215,33 @@ ul li span:hover {
     font-size: 14px;
     padding: 12px 8px 8px 38px;
   }
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  top: 15px;
+  right: 15px;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
 }
