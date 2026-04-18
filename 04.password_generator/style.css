@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.display img {
+  width: 30px;
+  cursor: pointer;
+}
+
+body {
+  background: #002339;
+  color: #fff;
+}
+
+.container {
+  margin: 12%;
+  width: 90%;
+  max-width: 700px;
+}
+
+.display {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 20px;
+  border-radius: 8px;
+}
+
+.container h1 {
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.container h1 span {
+  color: #019f55;
+  border-bottom: 4px solid #019f55;
+  padding-bottom: 7px;
+}
+
+.display input {
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+}
+
+.container button img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.container button {
+  border: 0;
+  outline: 0;
+  background: #019f55;
+  color: #fff;
+  font-weight: 300;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#message {
+  margin: 15px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#generate-button {
+  transition: 0.2s;
+}
+
+#generate-button:hover {
+  transform: scale(1.085);
+  opacity: 1.1;
+  background: #046c3b;
+}
+
+#copy {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#copy:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  #password {
+    width: 80%;
+  }
+
+  .display {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1260px) {
+  .display {
+    width: 95%;
+  }
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  top: 15px;
+  right: 15px;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
