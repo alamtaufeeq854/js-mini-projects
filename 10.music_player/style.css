@@ -60,6 +60,7 @@ nav .circle {
 }
 
 #progress {
+  appearance: none;
   -webkit-appearance: none;
   background: #f53192;
   width: 100%;
