@@ -5,18 +5,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let voiceSelect = document.querySelector("select");
 
-  window.speechSynthesis.onvoiceschanged = () => {
-    voices = window.speechSynthesis.getVoices();
-    speech.voice = voices[0];
+  function loadVoices() {
+    voices = speechSynthesis.getVoices();
 
-    voices.forEach(
-      (voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)),
-    );
-  };
+    voiceSelect.innerHTML = "";
+
+    voices.forEach((voice, i) => {
+      voiceSelect.options[i] = new Option(voice.name, i);
+    });
+
+    if (voices.length > 0) {
+      speech.voice = voices[0];
+    }
+  }
+
+  // Call multiple times (mobile fix)
+  loadVoices();
+  setTimeout(loadVoices, 200);
+
+  // Keep listener also
+  speechSynthesis.onvoiceschanged = loadVoices;
 
   voiceSelect.addEventListener("change", () => {
     speech.voice = voices[voiceSelect.value];
   });
+
   document.querySelector("button").addEventListener("click", () => {
     speech.text = document.querySelector("textarea").value;
     window.speechSynthesis.speak(speech);
