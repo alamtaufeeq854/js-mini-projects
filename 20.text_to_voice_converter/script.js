@@ -19,11 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Call multiple times (mobile fix)
   loadVoices();
   setTimeout(loadVoices, 200);
 
-  // Keep listener also
   speechSynthesis.onvoiceschanged = loadVoices;
 
   voiceSelect.addEventListener("change", () => {
