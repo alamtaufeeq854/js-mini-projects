@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  background-image: linear-gradient(#f44336, #730228);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector {
+  width: 330px;
+}
+
+#selectField {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#selectField img {
+  width: 15px;
+  transition: transform 0.5s;
+}
+
+.options img {
+  width: 25px;
+  position: absolute;
+  top: 12px;
+  left: 25px;
+}
+
+.options {
+  width: 100%;
+  padding: 15px 0 15px 70px;
+  list-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#list {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.options:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  top: 15px;
+  right: 15px;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
