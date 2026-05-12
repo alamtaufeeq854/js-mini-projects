@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #08001f, #30197d);
+  color: #fff;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  background: rgba(235, 0, 255, 0.11);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+.container::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background: #419aff;
+
+  border: 5px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+}
+
+.container::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background: #f41b75;
+  border-radius: 50%;
+  position: absolute;
+  right: -30px;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.clock span {
+  font-size: 80px;
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after {
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50px;
+  transform: translateX(-50%);
+}
+
+#hrs::after {
+  content: "HOURS";
+}
+
+#min::after {
+  content: "MINS";
+}
+
+#sec::after {
+  content: "SEC";
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  top: 15px;
+  right: 15px;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
+
+@media (max-width: 912px) {
+  .container {
+    width: 630px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 300px;
+  }
+
+  .clock span {
+    font-size: 50px;
+    width: 80px;
+  }
+
+  .container::before {
+    height: 100px;
+    width: 100px;
+    right: -20px;
+  }
+
+  .container::after {
+    height: 100px;
+    width: 100px;
+    left: -20px;
+  }
+
+  .clock span::after {
+    font-size: 10px;
+    left: 35px;
+  }
+}
