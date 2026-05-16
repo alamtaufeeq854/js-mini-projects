@@ -5,12 +5,12 @@ const tweet = document.getElementById("tweet");
 async function getQuote() {
   try {
     const res = await fetch(
-      `https://corsproxy.io/?https://zenquotes.io/api/random&t=${Date.now()}`,
+      `https://motivational-spark-api.vercel.app/api/quotes/random`,
     );
     const data = await res.json();
 
-    quote.innerHTML = data[0].q;
-    author.innerHTML = data[0].a;
+    quote.innerHTML = data.quote;
+    author.innerHTML = data.author;
   } catch (error) {
     console.error(error);
   }
